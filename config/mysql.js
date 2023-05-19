@@ -30,5 +30,13 @@ const postDataEvent = ({ req, res }) => {
     res.status(201).json(result);
   });
 };
-
-module.exports = { gatDataEvent, postDataEvent };
+const deleteDataEvent = ({req,res}) => {
+  const id = req.body.id
+  const querySql = "delete from Evento where idEvento = " + id
+  con.query(querySql, function (err, result, fields) {
+    if (err) throw err;
+    console.log(result);
+    res.status(201).json(result);
+  });
+}
+module.exports = { gatDataEvent, postDataEvent, deleteDataEvent };
