@@ -1,0 +1,9 @@
+POST  http://localhost:3001/api/event/data
+content-type: application/json
+
+{
+    "nombre": "Evento",
+    "fechaInicio": "12/01/17",
+    "fechaFin": "14/01/17",
+    "observaciones": "Evento musican el ceuni"
+}
